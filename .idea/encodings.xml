@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/test_api/logs/log.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test_api/logs/logs.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test_api/logs/woniu.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/woniuapi/logs/2022-03-26.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/woniuapi/logs/2022-03-28.log" charset="GBK" />
+  </component>
+</project>

@@ -1,0 +1,76 @@
+login_pass:
+  url: /woniusales/user/login
+  data:
+    username: admin
+    password: admin123
+    verifycode: '0000'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: login-pass
+
+login_fail_password_less:
+  url: /woniusales/user/login
+  data:
+    username: admin
+    password: ~
+    verifycode: '0000'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: login-fail
+
+login_fail_username_less:
+  url: /woniusales/user/login
+  data:
+    username: ~
+    password: admin123
+    verifycode: '0000'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: login-fail
+
+login_fail_wrong_password:
+  url: /woniusales/user/login
+  data:
+    username: admin
+    password: admin1234
+    verifycode: '0000'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: login-fail
+
+login_fail_wrong_username:
+  url: /woniusales/user/login
+  data:
+    username: admin2
+    password: admin123
+    verifycode: '0000'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: login-fail
+
+login_fail_verifycode_less:
+  url: /woniusales/user/login
+  data:
+    username: admin2
+    password: admin123
+    verifycode: ~
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: Error
+
+login_fail_wrong_verifycode:
+  url: /woniusales/user/login
+  data:
+    username: admin2
+    password: admin123
+    verifycode: '1111'
+  headers:
+    Cookie: JSESSIONID=C38554ECD44B9B2A37E952D48F50F3BA; _jfinal_captcha=f1535e150fd34884beaa32a2ff43f02b
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+  expect: vcode-error

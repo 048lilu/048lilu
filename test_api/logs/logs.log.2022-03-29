@@ -1,0 +1,15 @@
+2022-03-29 00:11:21-fileconfiglog-MainThread:fileAndConsole:25-DEBUG    : it IS from fileAndConsole msg
+2022-03-29 00:12:16-fileconfiglog [MainThread:fileconfiglog.py:25-DEBUG    : it IS from fileAndConsole msg
+2022-03-29 00:12:47-fileconfiglog [MainThread:fileconfiglog.py:25-DEBUG : it IS from fileAndConsole msg
+2022-03-29 00:13:06-fileconfiglog [MainThread:fileconfiglog.py:25- DEBUG : it IS from fileAndConsole msg
+2022-03-29 22:58:21 httprequest [MainThread:httprequest.py:43]  ERROR : No connection adapters were found for 'htp://119.3.41.185:8012/woniusales/user/login'
+Traceback (most recent call last):
+  File "D:\pythonProject\woniuapi\core\httprequest.py", line 39, in httprequest
+    res = self.session.request(method, url, params=params, data=data, json=json, headers=headers, **keyword)
+  File "D:\pythonProject\venv\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\pythonProject\venv\lib\site-packages\requests\sessions.py", line 639, in send
+    adapter = self.get_adapter(url=request.url)
+  File "D:\pythonProject\venv\lib\site-packages\requests\sessions.py", line 732, in get_adapter
+    raise InvalidSchema("No connection adapters were found for {!r}".format(url))
+requests.exceptions.InvalidSchema: No connection adapters were found for 'htp://119.3.41.185:8012/woniusales/user/login'
